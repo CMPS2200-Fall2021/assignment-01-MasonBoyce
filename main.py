@@ -16,7 +16,7 @@ def foo(x):
 def longest_run(mylist, key):
     longestRun = 0
     tracker = 0
-    for i in range(len(mylist)-1):
+    for i in range(len(mylist)):
         if mylist[i] ==  key:
             tracker += 1
         else:
@@ -24,6 +24,8 @@ def longest_run(mylist, key):
                 if tracker>longestRun:
                     longestRun = tracker
                 tracker = 0
+        if tracker>longestRun:
+            longestRun = tracker
     return longestRun
     pass
 
@@ -39,7 +41,7 @@ class Result:
     def __repr__(self):
         return('longest_size=%d left_size=%d right_size=%d is_entire_range=%s' %
               (self.longest_size, self.left_size, self.right_size, self.is_entire_range))
-              
+
 def helper(result1,result2):
     if result1.is_entire_range and result2.is_entire_range:
         lr = result1.longest_size + result2.longest_size
@@ -92,5 +94,4 @@ def helper2(mylist,key):
 ## Feel free to add your own tests here.
 def test_longest_run():
     assert longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3
-print(longest_run_recursive([2,12,12,8,12,12,12,12,0,12,1], 12))
-print(longest_run_recursive([7], 5))
+print (longest_run([12,12,12,8,12,12,0,12,12,12,12], 12))
