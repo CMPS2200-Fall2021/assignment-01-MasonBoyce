@@ -2,7 +2,7 @@
 
 # CMPS 2200 Assignment 1
 
-**Name:**_________________________
+**Name:** Mason Boyce
 
 
 In this assignment, you will learn more about asymptotic notation, parallelism, functional languages, and algorithmic cost models. As in the recitation, some of your answer will go here and some will go in `main.py`. You are welcome to edit this `assignment-01.md` file directly, or print and fill in by hand. If you do the latter, please scan to a file `assignment-01.pdf` and push to your github repository. 
@@ -12,36 +12,36 @@ In this assignment, you will learn more about asymptotic notation, parallelism, 
 1. **Asymptotic notation**
 
   - 1a. Is $2^{n+1} \in O(2^n)$? Why or why not? 
-.  
+.  Yes. It is because the adding a contanst in the numerater will not affect the answer assymoptic . This means if c =3 then we would always dominate it.
 .  
 .  
 .  
 . 
   - 1b. Is $2^{2^n} \in O(2^n)$? Why or why not?     
-.  
+.  No. This is not true because that would mean that 2^n = n which is not true.
 .  
 .  
 .  
 .  
   - 1c. Is $n^{1.01} \in O(\mathrm{log}^2 n)$?    
-.  
+.  No. When graphed it did not dominate
 .  
 .  
 .  
 
   - 1d. Is $n^{1.01} \in \Omega(\mathrm{log}^2 n)$?  
-.  
+.  yes. It was 
 .  
 .  
 .  
   - 1e. Is $\sqrt{n} \in O((\mathrm{log} n)^3)$?  
 .  
-.  
+.  No
 .  
 .  
   - 1f. Is $\sqrt{n} \in \Omega((\mathrm{log} n)^3)$?  
 .  
-.  
+.  Yes
 .  
 .  
 
@@ -52,9 +52,8 @@ $g(n) \in o(f(n))$ means that for **every** positive constant $c$, there exists 
 .  
 
 **Prove** that $o(g(n)) \cap \omega(g(n))$ is the empty set.  
-
 .  
-.  
+.  Since the equation for the problem is g(n)< f(n) and the f(n)>g(n) It would be impossible for them to have an intersection since the inequalities are opposite there would be no intersection. If this was big oh and big omega they would have an intersection when they were equal.
 .  
 .  
 .  
@@ -86,7 +85,7 @@ $$
   - 2a. Translate this to Python code -- fill in the `def foo` method in `main.py`  
 
   - 2b. What does this function do, in your own words?  
-
+THis function is a fibanocci sequence.
 .  
 .  
 .  
@@ -116,8 +115,8 @@ E.g., `longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3`
 
   - 3b. What is the Work and Span of this implementation?  
 
-.  
-.  
+.  W(N) = O(N)
+.  S(N) = O(N)
 .  
 .  
 .  
@@ -131,8 +130,8 @@ E.g., `longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3`
 
   - 3d. What is the Work and Span of this sequential algorithm?  
 .  
-.  
-.  
+.  W(n) = O(N)
+.  S(n) = O(N)
 .  
 .  
 .  
@@ -144,9 +143,8 @@ E.g., `longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3`
 
 
   - 3e. Assume that we parallelize in a similar way we did with `sum_list_recursive`. That is, each recursive call spawns a new thread. What is the Work and Span of this algorithm?  
-
-.  
-.  
+.  W(N) = O(N)
+.  S(n) = O(log(n))
 .  
 .  
 .  
