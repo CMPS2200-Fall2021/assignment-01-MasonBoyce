@@ -53,7 +53,7 @@ $g(n) \in o(f(n))$ means that for **every** positive constant $c$, there exists 
 
 **Prove** that $o(g(n)) \cap \omega(g(n))$ is the empty set.  
 .  
-.  
+.  Since the equation for the problem is g(n)< f(n) and the f(n)>g(n) It would be impossible for them to have an intersection since the inequalities are opposite there would be no intersection. If this was big oh and big omega they would have an intersection when they were equal.
 .  
 .  
 .  
